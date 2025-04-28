@@ -3,62 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio Lars Gerritsen</title>
+
+    <link rel="stylesheet" href="style/style.css">
+
     <style>
-        body {
-            background-color: rgb(230, 232, 231);
-            margin: 0;
-            padding: 0;
-            font-family: "Baskerville Old Face", serif;
-        }
-
-        .text-blocks {
-            background-color: rgb(209, 255, 250);
-            text-align: center;
-            padding: 10px;
-        }
-
-        h1 {
-            font-size: 350%;
-            margin: 0;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 65%;
-            margin: 20px auto;
-            border-radius: 10px;
-
-            background-color: white;
-            padding: 10px;
-            height: 500px;
-        }
-
-        .slides {
-            display: none;
-        }
-
-        img {
-            width: 100%;
-            height: 500px;
-            /* Set a fixed height */
-            object-fit: cover;
-            /* Ensures images fill the space without distortion */
-            border-radius: 10px;
-        }
-
-
-        .caption {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px 20px;
-            font-size: 200%;
-            border-radius: 5px;
-        }
-
         /* Navigation buttons */
         .prev,
         .next {
@@ -86,34 +34,26 @@
 </head>
 
 <body>
-
     <div class="text-blocks">
         <h1>Portfolio Lars Gerritsen</h1>
     </div>
-    <div class="dropdown" style="float:left;">
-        <button class="dropbtn">Left</button>
-        <div class="dropdown-content" style="left:0;">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-    </div>
+    
     <div class="slideshow-container">
-        <a href="FloatingNightstand.html">
+        <a href="Pages/Nightstand/FloatingNightstand.html">
         <div class="slides">
-            <img src="Floating Nightstand.jpg" alt="Floating Nightstand">
+            <img src="Pages/Nightstand/Floating nightstand.jpg" alt="Floating Nightstand">
             <div class="caption">Floating Nightstand</div>
         </div>
         </a>
-        <a href="BookStand.html">
+        <a href="Pages/BookStand/BookStand.html">
         <div class="slides">
             <img src="Book stand final version.jpg" alt="Book Stand">
             <div class="caption">Book Stand</div>
         </div>
     </a>
-    <a href="ChristmasCard.html">
+    <a href="Pages/ChristmasCard/Assets/ChristmasCard.html">
         <div class="slides">
-            <img src="ChristmasCard.png" alt="Christmas Card">
+            <img src="/Pages/ChristmasCard/Assets/ChristmasCard.png" alt="Christmas Card made with processing">
             <div class="caption">Christmas Card</div>
         </div>
     </a>
