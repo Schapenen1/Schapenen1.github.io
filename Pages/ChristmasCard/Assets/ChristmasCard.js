@@ -17,7 +17,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(500, 800);
+  let cnv = createCanvas(500, 800);
+  cnv.parent("canvas-container"); // This puts the canvas in the correct place
   textFont('Lavishly Yours'); 
   bg = new Background();
   match = new Match();
