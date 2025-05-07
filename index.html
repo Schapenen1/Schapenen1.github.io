@@ -30,13 +30,28 @@
         .next {
             right: -60px;
         }
+
+        
     </style>
 </head>
 
 <body>
     <div class="text-blocks">
-        <h1>Portfolio Lars Gerritsen</h1>
+        <button class="portfolio-button" onclick="window.location.href='../../../index.html';">
+          <h1>
+            Portfolio Lars Gerritsen
+          </h1>
+        </button>
     </div>
+
+    <select onchange="window.location.href=this.value">
+        <option value="" selected disabled hidden> 
+            <h2> Projects </h2> 
+        </option>
+        <option value="Pages/Nightstand/FloatingNightstand.html"> Floating Nightstand</option>
+        <option value="Pages/BookStand/BookStand.html">Bookstand </option>
+        <option value="Pages/ChristmasCard/Assets/ChristmasCard.html">ChristmasCard</option>
+    </select>
     
     <div class="slideshow-container">
         <a href="Pages/Nightstand/FloatingNightstand.html">
@@ -54,7 +69,7 @@
     <a href="Pages/ChristmasCard/Assets/ChristmasCard.html">
         <div class="slides">
             <img src="/Pages/ChristmasCard/Assets/ChristmasCard.png" alt="Christmas Card made with processing">
-            <div class="caption">Christmas Card</div>
+            <div class="caption"> Christmas Card</div>
         </div>
     </a>
         <!-- Navigation Buttons -->
@@ -77,7 +92,7 @@
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 10 seconds
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
 
         function plusSlides(n) {
