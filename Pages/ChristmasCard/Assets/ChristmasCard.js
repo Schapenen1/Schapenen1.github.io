@@ -48,9 +48,7 @@ function draw() {
   fire.display();
 
   noStroke();
-  rect(500, 0, height, width);
-  rect(0, 750, height, width);
-}
+  }
 
 function mousePressed() {
   if (mouseY < height / 2) {
@@ -84,7 +82,7 @@ class Fire {
       } else {
         this.frameCountTracker++;
       }
-      image(this.images[this.i], 50, 550, 400, 400);
+      image(this.images[this.i], 50, 550, 400, 475);
     }
   }
 
@@ -110,7 +108,7 @@ class Background {
     fill(30);
     ellipse(250, 325, 600, 400);
     fill("#553F16");
-    ellipse(250, 385, 240, 40);
+    ellipse(250, 425, 240, 40);
     pop();
   }
 

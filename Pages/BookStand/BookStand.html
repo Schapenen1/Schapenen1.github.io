@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="text-blocks">
+      <div class="text-blocks">
         <button class="portfolio-button" onclick="window.location.href='../../../index.html';">
           <h1>
             Portfolio Lars Gerritsen
@@ -25,6 +25,14 @@
         </button>
     </div>
 
+    <select onchange="window.location.href=this.value">
+        <option value="" selected disabled hidden> 
+            <h2> Projects </h2> 
+        </option>
+        <option value="../Nightstand/FloatingNightstand.html"> Floating Nightstand</option>
+        <option value="../BookStand/BookStand.html">Bookstand </option>
+        <option value="../ChristmasCard/Assets/ChristmasCard.html">ChristmasCard</option>
+    </select>
     <h2> BookStand</h2>
 </body>
 </html>

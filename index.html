@@ -35,6 +35,8 @@
     </style>
 </head>
 
+    </head>
+
 <body>
     <div class="text-blocks">
         <button class="portfolio-button" onclick="window.location.href='../../../index.html';">
@@ -44,43 +46,50 @@
         </button>
     </div>
 
-    <select onchange="window.location.href=this.value">
-        <option value="" selected disabled hidden> 
-            <h2> Projects </h2> 
-        </option>
-        <option value="Pages/Nightstand/FloatingNightstand.html"> Floating Nightstand</option>
-        <option value="Pages/BookStand/BookStand.html">Bookstand </option>
-        <option value="Pages/ChristmasCard/Assets/ChristmasCard.html">ChristmasCard</option>
-    </select>
-    
+    <div class="dropdown-container">
+        <select onchange="window.location.href=this.value">
+            <option value="" selected disabled hidden>Projects</option>
+            <option value="Pages/Nightstand/FloatingNightstand.html">Floating Nightstand</option>
+            <option value="Pages/BookStand/BookStand.html">Bookstand</option>
+            <option value="Pages/ChristmasCard/Assets/ChristmasCard.html">ChristmasCard</option>
+        </select>
+        <select onchange="window.location.href=this.value">
+            <option value="" selected disabled hidden>About Me</option>
+            <option value="Pages/About Me/About Me.html">
+                About Me
+            </option>
+            
+        </select>
+</div>
     <div class="slideshow-container">
+    <div class="slides">
         <a href="Pages/Nightstand/FloatingNightstand.html">
-        <div class="slides">
-            <img src="Pages/Nightstand/Floating nightstand.jpg" alt="Floating Nightstand">
+            <img src="Pages/Nightstand/Floating nightstand.jpg" alt="Floating Nightstand" class="img-slides">
             <div class="caption">Floating Nightstand</div>
-        </div>
         </a>
+    </div>
+
+    <div class="slides">
         <a href="Pages/BookStand/BookStand.html">
-        <div class="slides">
-            <img src="Pages/BookStand/Bookstand Final version.jpg" alt="Book Stand">
+            <img src="Pages/BookStand/Bookstand Final version.jpg" alt="Book Stand" class="img-slides">
             <div class="caption">Book Stand</div>
-        </div>
-    </a>
-    <a href="Pages/ChristmasCard/Assets/ChristmasCard.html">
-        <div class="slides">
-            <img src="/Pages/ChristmasCard/Assets/ChristmasCard.png" alt="Christmas Card made with processing">
-            <div class="caption"> Christmas Card</div>
-        </div>
-    </a>
-        <!-- Navigation Buttons -->
-        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </a>
     </div>
 
-    <div class="text-blocks">
-        <h2> Linkedin </h2>
+    <div class="slides">
+        <a href="Pages/ChristmasCard/Assets/ChristmasCard.html">
+            <img src="/Pages/ChristmasCard/Assets/ChristmasCard.png" alt="Interactive ChristmasCard" class="img-slides">
+            <div class="caption">Christmas Card</div>
+        </a>
     </div>
 
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+</div>
+
+
+    <!-- JavaScript script for the slides-->
     <script>
         let slideIndex = 0;
 
@@ -92,7 +101,7 @@
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
         }
 
         function plusSlides(n) {
@@ -102,5 +111,14 @@
 
         showSlides(); // Start the slideshow
     </script>
+
+    <div class="text-blocks">
+        <img src="LinkedIn Logo.png" class="img-logo">
+        <a href="https://www.linkedin.com/in/lars-gerritsen-30b841276/" style="color: black; text-decoration: none;">
+        <h2> LinkedIn </h2>
+        <!--</a>
+        <img src="Mail Logo.png" class="img-logo">
+        <h2> Contact </h2> -->
+    </div>
 </body>
 </html>

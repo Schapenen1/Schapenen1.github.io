@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  
   <div class="text-blocks">
     <button class="portfolio-button" onclick="window.location.href='../../../index.html';">
       <h1>
@@ -30,20 +31,31 @@
     </button>
   </div>
 
+  <select onchange="window.location.href=this.value">
+        <option value="" selected disabled hidden> 
+            <h2> Projects </h2> 
+        </option>
+        <option value="../Nightstand/FloatingNightstand.html"> Floating Nightstand</option>
+        <option value="../BookStand/BookStand.html">Bookstand </option>
+        <option value="../ChristmasCard/Assets/ChristmasCard.html">ChristmasCard</option>
+    </select>
+
   <h2>Christmas Card</h2>
 
   <div style="display: flex;">
     <div style="padding-left: 40px; padding-right: 40px;">
       <h3> This ChristmasCard is made with help of processing in collaboration with
-        <a href=" " > Arthur Godthelp </a>
-        This card was part of an assignment from creative technology M2 and then in specific the course Programming & Physical computing
+        <a href="https://deusthelp.my.canva.site/deusthelp " > 
+          Arthur Godthelp 
+        </a>
+        This card was part of an assignment from creative technology M2 and then in specific the course Programming & Physical 
+      </h3>
     </div>
     <div id="canvas-container" style="padding-right: 40px;">
       <script src="ChristmasCard.js"></script>
-      </div>
-    </h3>
     </div>
+    
+    
   </div> 
 </body>
 </html>
-,
