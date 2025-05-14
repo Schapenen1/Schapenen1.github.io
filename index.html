@@ -18,17 +18,18 @@
             padding: 15px;
             border: none;
             border-radius: 50%;
-            cursor: pointer;
-            z-index: 10;
+            
+          
+            font-size: 50px; /* Add this to make arrow icons larger */
         }
 
         /* Move buttons a little outside the slideshow */
         .prev {
-            left: -60px;
+            left: -75px;
         }
 
         .next {
-            right: -60px;
+            right: -85px;
         }
 
         
@@ -101,7 +102,7 @@
             slideIndex++;
             if (slideIndex > slides.length) { slideIndex = 1; }
             slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+            setTimeout(showSlides, 10000); // Change image every 10 seconds
         }
 
         function plusSlides(n) {
@@ -116,9 +117,9 @@
         <img src="LinkedIn Logo.png" class="img-logo">
         <a href="https://www.linkedin.com/in/lars-gerritsen-30b841276/" style="color: black; text-decoration: none;">
         <h2> LinkedIn </h2>
-        <!--</a>
+        </a>
         <img src="Mail Logo.png" class="img-logo">
-        <h2> Contact </h2> -->
+        <h2> Contact </h2> 
     </div>
 </body>
 </html>

@@ -36,7 +36,9 @@ h1 {
 option {
     border-radius: 20px;
     background-color: rgb(209, 255, 250);
-    
+    height: 50px;
+    text-align: center;
+    font-size: 100%;
 }
 
 select {
@@ -112,6 +114,6 @@ h3 {
 
 #canvas-container {
   position: relative;
-  top: -60px;
+  top: -70px;
 }
 
