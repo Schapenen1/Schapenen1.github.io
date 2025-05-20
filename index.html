@@ -91,35 +91,55 @@
 
 
     <!-- JavaScript script for the slides-->
-    <script>
-        let slideIndex = 0;
+   <script>
+    let slideIndex = 1; // Start from 1 for manual control
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("slides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 10000); // Change image every 10 seconds
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slides");
+
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
 
-        function plusSlides(n) {
-            slideIndex += n - 1;
-            showSlides();
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function autoSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
 
-        showSlides(); // Start the slideshow
-    </script>
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(autoSlides, 10000); // Auto-play every 10s
+    }
+
+    // Initial call
+    showSlides(slideIndex);
+    setTimeout(autoSlides, 10000);
+</script>
+
 
     <div class="text-blocks">
-        <img src="LinkedIn Logo.png" class="img-logo">
-        <a href="https://www.linkedin.com/in/lars-gerritsen-30b841276/" style="color: black; text-decoration: none;">
-        <h2> LinkedIn </h2>
-        </a>
-        <img src="Mail Logo.png" class="img-logo">
-        <h2> Contact </h2> 
+        <div class="contact">
+            <img src="LinkedIn Logo.png" class="img-logo">
+            <a href="https://www.linkedin.com/in/lars-gerritsen-30b841276/" style="color: black; text-decoration: none;">
+             <h2> LinkedIn </h2>
+            </a>
+        </div>
+        <div class="contact">
+            <img src="Mail Logo.png" class="img-logo">
+            <h2> Contact </h2> 
+        </div>
     </div>
 </body>
 </html>

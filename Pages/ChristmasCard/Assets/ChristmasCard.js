@@ -51,8 +51,8 @@ function draw() {
   }
 
 function mousePressed() {
-  if (mouseY < height / 2) {
-    globe.startShake();
+ if (mouseY<590 && mouseX>0 && mouseX<width) {
+      globe.startShake();
   }
 }
 
