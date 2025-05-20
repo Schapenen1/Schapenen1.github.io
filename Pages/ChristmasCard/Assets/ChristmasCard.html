@@ -42,7 +42,7 @@
     <select onchange="window.location.href=this.value">
         <option value="" selected disabled hidden>About Me</option>
         <option value="/Pages/About Me/About Me.html">
-            Floating Nightstand
+            About Me
         </option>
     </select>
 
@@ -59,8 +59,9 @@
          The goal for this assignment was create a card with text that could be manipulated.
          The other movements were extras to make the card more appealing.
       </h3>
-      <h3> <ul style="font-size: 125%; margin-left: -50px;">Instructions for the interactive christmascard: </ul>
-        <li> Click on the snowglobe to "shake"it.</li>
+      <h3> <ul style="font-size: 115%; margin-left: -45px;">
+        <strong>Instructions for the interactive christmascard: </strong></ul>
+        <li> Click on the snowglobe to "shake" it.</li>
         <li> Hover over the fireplace with the mouse to make a candle appear.</li>
         <li> Press the "L" key, on your keyboard, when then candle is on the log, the brown ellipse.</li>
       </h3>
@@ -68,13 +69,24 @@
         The tool used to create this card was Processing version 4.3, revision 01293. 
         To make it work on a website the processing language is coverted to JavaScript, which makes it possible to have the interactiveness on a website. 
         The link down below is to download the orginial processing file, as a zip file. 
-        To open this file you need to have processing installed on your device.
+        To open this file and run it you need to have processing installed on your device.
       </h3>
       <a href="Christmas_Card.zip" download style="margin: 50px"> ChristmasCard.zip</a>
-      </div>
-    <div id="canvas-container" style="padding-right: 40px; margin-bottom: 0px;">
-      <script src="ChristmasCard.js"></script>
+        <h3> 
+        The idea of the christmascard came very quickly as it was nearly christmas and we were excited for the christmas. 
+        In contrast something which did not go smoothly was the goal of the assignment, making the text move. 
+        Firstly the text was only moving down but, this made it look more like rain than snow.
+        That is why decide to make the snow follow a very stretched sine wave.
+        This is done because then you get the effect that the snow is whirling down. 
+        To make sure there is difference between diffrent words, different snow particles the amplitude of the sinewave is randomized.
+        Another difficult part was the making of the fire, as the first test was using particles to make the fire.
+        This made the fire look not real that is why we decided to loop through 8 different images that are all different stages of the fire.
+        The soultion with the images satisfied us and therefore we stuck with it for the final design. 
+      </h3>
     </div>
+      <div id="canvas-container" style="padding-right: 40px; margin-bottom: 0px;">
+      <script src="ChristmasCard.js"></script>
+  </div>
     
    
   </div> 
