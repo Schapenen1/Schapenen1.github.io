@@ -23,11 +23,10 @@ body {
     width: 100%;
     height: 100%;
     display: block;
-    cursor: pointer;
 }
 
 .portfolio-button:hover {
-    color:#333;
+   cursor: pointer; 
 }
 
 h1 {
@@ -51,8 +50,10 @@ select {
     font-size: 150%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    font-family: "Baskerville Old Face", serif;
     border: none;
+}
+.select:hover{
+    cursor:pointer;
 }
 .dropdown-container {
     display: flex;
@@ -66,7 +67,7 @@ select {
     display: flex;
 }
 .contact:hover{
-    color: #333;
+    cursor: pointer;
 }
 
 .img-logo {
@@ -95,7 +96,7 @@ select {
     display: none;
 }
 .img-slides:hover{
-    filter: brightness(80%);
+    cursor: pointer;
 }
 
 .img-slides {
