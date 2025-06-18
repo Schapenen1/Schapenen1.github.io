@@ -15,6 +15,8 @@ body {
     align-items: center;
     justify-content: center;
     border: none;
+    margin: 0;
+    padding: 0;
     }
 
 .portfolio-button {
@@ -95,9 +97,6 @@ select {
 .slides {
     display: none;
 }
-.img-slides:hover{
-    cursor: pointer;
-}
 
 .img-slides {
     width: 100%;
@@ -105,6 +104,10 @@ select {
     object-fit: cover;
     border-radius: 10px;
     border: 5px solid black;
+}
+
+.img-slides:hover{
+    cursor: pointer;
 }
 
 .caption {
@@ -136,8 +139,26 @@ h3 {
     display: flex;
     height: 300px;
     width: 300px;
+    padding:20px;
 }
 
+/* Bookstand page */
+
+.img-bookstand {
+    display: flex;
+   
+}
+
+.img-bookstand img {
+    height: 500px;
+    width:auto;
+    border: 5px solid rgba(0, 0, 0);
+    gap: 0;
+}
+
+.figure {
+    margin:0;
+}
 /* Christmas Card page */
 canvas {
     border: 2px solid #333;
@@ -150,3 +171,7 @@ canvas {
     transform-origin: top left; /* So it scales from the top-left corner */
 
 }
+  figcaption {
+    font-size: 16px;
+    color: #333;
+  }

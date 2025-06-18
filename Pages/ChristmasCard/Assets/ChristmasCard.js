@@ -264,32 +264,40 @@ class Song {
   constructor() {
     this.font = font;
     this.lineHeight = 50;
-    storestrings = jingleLyrics
+    this.words = [];         // Array to hold all words
+    this.wordX = [];
+    this.wordY = [];
+    this.amplitudes = [];
 
+    let yOffset = -500;
 
-    this.wordX = new Array(storestrings.length);
-    this.wordY = new Array(storestrings.length);
-    this.amplitudes = new Array(storestrings.length);
+    for (let i = 0; i < jingleLyrics.length; i++) {
+      let line = jingleLyrics[i];
+      let lineWords = line.split(/\s+/); // Split line into words using space or whitespace
 
-    for (let i = 0; i < storestrings.length; i++) {
-      this.wordX[i] = random(-150, 0);
-      this.wordY[i] = i * this.lineHeight - 500;
-      this.amplitudes[i] = random(5, 15);
+      for (let j = 0; j < lineWords.length; j++) {
+        this.words.push(lineWords[j]);
+        this.wordX.push(random(-150, 0));
+        this.wordY.push(yOffset);
+        this.amplitudes.push(random(5, 15));
+        yOffset += 10; // Stagger Y position of each word slightly
+      }
+
+      yOffset += this.lineHeight - (5 * lineWords.length); // Space between lines
     }
   }
 
   display() {
     fill(255);
     textSize(30);
-    for (let i = storestrings.length - 1; i >= 0; i--) {
+    for (let i = 0; i < this.words.length; i++) {
       let wordOffset = this.amplitudes[i] * sin(frameCount * 0.05 + i);
-      text(storestrings[i], this.wordX[i] + wordOffset, this.wordY[i]);
+      text(this.words[i], this.wordX[i] + wordOffset, this.wordY[i]);
     }
-    
   }
 
   update() {
-    for (let i = 0; i < storestrings.length; i++) {
+    for (let i = 0; i < this.words.length; i++) {
       this.wordY[i] += 1;
       if (this.wordY[i] > 150) {
         this.wordY[i] = -500;
@@ -297,6 +305,7 @@ class Song {
     }
   }
 }
+
 
 class Socks {
   constructor() {
