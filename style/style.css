@@ -156,9 +156,19 @@ h3 {
     gap: 0;
 }
 
-.figure {
-    margin:0;
+.img-nightstand {
+    display: flex;
+   
 }
+
+.img-nightstand img {
+    height: 500px ;
+    width: 750px ;
+    border: 5px solid rgba(0, 0, 0);
+    margin: 20px;
+    gap: 0;
+}
+
 /* Christmas Card page */
 canvas {
     border: 2px solid #333;
@@ -171,7 +181,17 @@ canvas {
     transform-origin: top left; /* So it scales from the top-left corner */
 
 }
-  figcaption {
+ figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+figcaption {
     font-size: 16px;
     color: #333;
-  }
+    text-align: center;
+    margin-top: 10px;
+}
+
